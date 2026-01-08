@@ -1,0 +1,12 @@
+# Hostie Child Twenty-One Theme Configuration File
+name: "hostie demo11"
+description: "The Child Theme for WHMCS Twenty-One Theme"
+author: "Reacthemes"
+properties:
+serverSidePagination: false # Defines client side will handle pagination
+provides:
+bootstrap: 4.5.3
+jquery: 1.12.4
+fontawesome: 5.10.1
+config:
+  parent: twenty-one

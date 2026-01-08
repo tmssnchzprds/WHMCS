@@ -1,0 +1,1141 @@
+/*
+Theme Name: digit-of - Responsive WHMCS Client Area Template
+Theme URI: http://www.whmcsdes.com
+Description: awesome and clean WHMCS Template. is designed for Hosting Companies,  Contains +25 Redesigned files which have been well organized built using 1170 grid system.
+Version: 8.0.4
+Author: WHMCSdes
+Author URI: http://whmcsdes.com
+Tags: powerful, host
+*/
+
+#order-digit-of {
+  margin-top: 30px;
+}
+
+.product {
+  text-align: center;
+}
+
+div.header-lined {
+  display: inline-block;
+  margin-bottom: 30px;
+}
+
+div.header-lined h1 {
+  color: #fff;
+}
+
+div.header-lined p {
+  color: #fff;
+}
+
+#order-digit-of .products .product div.product-desc {
+  width: 100%;
+  text-align: center;
+  padding: 0 20px;
+}
+
+#order-digit-of .products .product {
+  padding: 0;
+  padding-top: 0;
+  margin: 0 0 30px 0;
+  background: #292c3e;
+  min-height: 471px;
+  border: 0;
+  border-radius: 0;
+}
+
+#order-digit-of .products .product header {
+  background: var(--main-gradient-color);
+  /* Old browsers */
+  background: -moz-linear-gradient(
+    left,
+    var(--main-gradient-color) 0%,
+    var(--secondary-gradient-color) 100%
+  );
+  /* FF3.6+ */
+  background: -webkit-gradient(
+    linear,
+    left left,
+    left right,
+    color-sleft(0%, var(--main-gradient-color)),
+    color-sleft(100%, var(--secondary-gradient-color))
+  );
+  /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(
+    left,
+    var(--main-gradient-color) 0%,
+    var(--secondary-gradient-color) 100%
+  );
+  /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(
+    left,
+    var(--main-gradient-color) 0%,
+    var(--secondary-gradient-color) 100%
+  );
+  /* Opera 11.10+ */
+  background: -ms-linear-gradient(
+    left,
+    var(--main-gradient-color) 0%,
+    var(--secondary-gradient-color) 100%
+  );
+  /* IE10+ */
+  background: linear-gradient(
+    to right,
+    var(--main-gradient-color) 0%,
+    var(--secondary-gradient-color) 100%
+  );
+  /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='var(--main-gradient-color)', endColorstr='var(--secondary-gradient-color)', GradientType=0);
+  /* IE6-9 */
+  padding: 20px;
+  margin: 0 0 20px 0;
+  border-radius: 0;
+  text-align: center;
+}
+
+#order-digit-of .products .product header span {
+  color: #fff;
+  font-size: 18px;
+}
+
+#order-digit-of .products .product header i {
+  font-size: 30px;
+  display: block;
+  margin-bottom: 10px;
+}
+
+.product-desc {
+  float: left;
+}
+
+.product footer {
+  float: right;
+}
+
+.product-desc p {
+  margin: 0;
+}
+
+.product-desc p,
+.product-desc ul li {
+  margin: 0;
+  font-family: "Karla", sans-serif;
+  line-height: 31px;
+  font-size: 15px;
+  color: #fff;
+  font-weight: 400;
+}
+
+.product-desc ul {
+  padding: 0;
+  margin: 0 0 0 5px;
+  list-style: none;
+}
+
+#order-digit-of .products .product div.product-pricing {
+  margin-bottom: 20px;
+  color: #fff;
+  padding: 0 0 20px 0;
+  width: 100%;
+  display: inline-block;
+  border-bottom: 1px solid #3b3d50;
+}
+
+#order-digit-of .products .product div.product-pricing span.price {
+  font-size: 21px;
+  margin: 10px 0;
+  display: block;
+}
+
+#order-digit-of .products .product footer {
+  margin: 20px 0 30px;
+  text-align: center;
+  float: none;
+  display: inline-table;
+}
+
+a.btn.btn-success.btn-sm.wdes-digit-of-order-btn {
+  padding: 10px 30px;
+  font-size: 15px;
+}
+
+a.btn.btn-success.btn-sm.wdes-digit-of-order-btn i {
+  margin-right: 5px;
+}
+
+.panel-sidebar {
+  border-color: transparent;
+  background: #292c3e;
+}
+
+.panel-sidebar > .panel-heading {
+  color: #fff;
+  background-color: transparent;
+}
+
+.panel-sidebar .panel-title {
+  font-size: 14px;
+  font-weight: 400;
+  color: #fff;
+}
+
+.list-group-item {
+  background-color: transparent;
+}
+
+a.list-group-item,
+button.list-group-item {
+  color: #fff;
+}
+
+a.list-group-item:focus,
+a.list-group-item:hover,
+button.list-group-item:focus,
+button.list-group-item:hover {
+  background: var(--main-gradient-color);
+  /* Old browsers */
+  background: -moz-linear-gradient(
+    left,
+    var(--main-gradient-color) 0%,
+    var(--secondary-gradient-color) 100%
+  );
+  /* FF3.6+ */
+  background: -webkit-gradient(
+    linear,
+    left left,
+    left right,
+    color-sleft(0%, var(--main-gradient-color)),
+    color-sleft(100%, var(--secondary-gradient-color))
+  );
+  /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(
+    left,
+    var(--main-gradient-color) 0%,
+    var(--secondary-gradient-color) 100%
+  );
+  /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(
+    left,
+    var(--main-gradient-color) 0%,
+    var(--secondary-gradient-color) 100%
+  );
+  /* Opera 11.10+ */
+  background: -ms-linear-gradient(
+    left,
+    var(--main-gradient-color) 0%,
+    var(--secondary-gradient-color) 100%
+  );
+  /* IE10+ */
+  background: linear-gradient(
+    to right,
+    var(--main-gradient-color) 0%,
+    var(--secondary-gradient-color) 100%
+  );
+  /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='var(--main-gradient-color)', endColorstr='var(--secondary-gradient-color)', GradientType=0);
+  /* IE6-9 */
+}
+
+.panel-sidebar a.list-group-item.active,
+.panel-sidebar a.list-group-item.active:focus,
+.panel-sidebar a.list-group-item.active:hover {
+  background: var(--main-gradient-color);
+  /* Old browsers */
+  background: -moz-linear-gradient(
+    left,
+    var(--main-gradient-color) 0%,
+    var(--secondary-gradient-color) 100%
+  );
+  /* FF3.6+ */
+  background: -webkit-gradient(
+    linear,
+    left left,
+    left right,
+    color-sleft(0%, var(--main-gradient-color)),
+    color-sleft(100%, var(--secondary-gradient-color))
+  );
+  /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(
+    left,
+    var(--main-gradient-color) 0%,
+    var(--secondary-gradient-color) 100%
+  );
+  /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(
+    left,
+    var(--main-gradient-color) 0%,
+    var(--secondary-gradient-color) 100%
+  );
+  /* Opera 11.10+ */
+  background: -ms-linear-gradient(
+    left,
+    var(--main-gradient-color) 0%,
+    var(--secondary-gradient-color) 100%
+  );
+  /* IE10+ */
+  background: linear-gradient(
+    to right,
+    var(--main-gradient-color) 0%,
+    var(--secondary-gradient-color) 100%
+  );
+  /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='var(--main-gradient-color)', endColorstr='var(--secondary-gradient-color)', GradientType=0);
+  /* IE6-9 */
+  border-color: transparent;
+}
+
+#order-digit-of .domain-selection-options .option {
+  color: #fff;
+}
+
+#order-digit-of .domain-selection-options .option > label {
+  background-color: #313244;
+}
+
+#order-digit-of .domain-selection-options .option-selected {
+  background: var(--main-gradient-color);
+  /* Old browsers */
+  background: -moz-linear-gradient(
+    left,
+    var(--main-gradient-color) 0%,
+    var(--secondary-gradient-color) 100%
+  );
+  /* FF3.6+ */
+  background: -webkit-gradient(
+    linear,
+    left left,
+    left right,
+    color-sleft(0%, var(--main-gradient-color)),
+    color-sleft(100%, var(--secondary-gradient-color))
+  );
+  /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(
+    left,
+    var(--main-gradient-color) 0%,
+    var(--secondary-gradient-color) 100%
+  );
+  /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(
+    left,
+    var(--main-gradient-color) 0%,
+    var(--secondary-gradient-color) 100%
+  );
+  /* Opera 11.10+ */
+  background: -ms-linear-gradient(
+    left,
+    var(--main-gradient-color) 0%,
+    var(--secondary-gradient-color) 100%
+  );
+  /* IE10+ */
+  background: linear-gradient(
+    to right,
+    var(--main-gradient-color) 0%,
+    var(--secondary-gradient-color) 100%
+  );
+  /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='var(--main-gradient-color)', endColorstr='var(--secondary-gradient-color)', GradientType=0);
+  /* IE6-9 */
+  color: #fff;
+}
+
+#order-digit-of label {
+  color: #fff;
+  margin-bottom: 0;
+}
+
+#containerNewUserSignup .field-icon {
+  position: absolute;
+  top: 18px;
+  left: 3px;
+  right: initial;
+}
+
+.promo label {
+  color: #fff;
+  margin-bottom: 0;
+  position: relative;
+  top: 38px;
+  z-index: 99;
+  left: 17px;
+}
+
+.view-cart-tabs .promo label {
+  left: 0;
+}
+
+.wdes-checkout {
+  background: #292c3e;
+  margin-bottom: 40px;
+}
+
+#order-digit-of .view-cart-items-header {
+  margin: 0;
+  padding: 15px;
+  background-color: transparent;
+  color: #fff;
+  font-size: 0.9em;
+  border-radius: 0;
+}
+
+#order-digit-of .view-cart-items .item {
+  margin: 0;
+  padding: 15px;
+  background-color: #2f3247;
+  border-left: 0;
+  border-right: 0;
+  font-size: 0.8em;
+  color: #fff;
+}
+
+#order-digit-of .view-cart-items .item:nth-child(even) {
+  background-color: #363950;
+}
+
+#order-digit-of .view-cart-items {
+  margin: 0 0 20px 0;
+  border-bottom: 0;
+}
+
+#order-digit-of .btn-remove-from-cart {
+  color: #2794e9;
+}
+
+#order-digit-of .view-cart-items .item-domain {
+  color: #2794e9;
+}
+
+#order-digit-of .empty-cart {
+  text-align: center;
+  margin: -20px 0 0 0;
+}
+
+#order-digit-of .empty-cart .btn {
+  margin: 0;
+  padding: 9px 10px;
+  background-color: #2794e9;
+  border: 0;
+  color: #fff;
+  border-radius: 0;
+  width: 100%;
+  text-decoration: none;
+}
+
+#order-digit-of .order-summary {
+  background-color: #292c3e;
+}
+
+#order-digit-of .order-summary .summary-totals {
+  border-top: 1px solid #42465e;
+  border-bottom: 1px solid #42465e;
+}
+
+#order-digit-of .order-summary h2,
+#order-digit-of .order-summary .loader {
+  color: #fff;
+}
+
+#order-digit-of .summary-container {
+  background-color: transparent;
+  color: #fff;
+}
+
+#order-digit-of .order-summary .btn-continue-shopping {
+  color: #2d9eec;
+  font-size: 0.9em;
+}
+
+#order-digit-of .view-cart-tabs {
+  margin: 0 0 20px 0;
+  background: #292c3e;
+}
+
+#order-digit-of .view-cart-tabs .nav-tabs {
+  padding-left: 0;
+  font-size: 0.8em;
+}
+
+.nav-tabs {
+  border-bottom: 0;
+}
+
+#order-digit-of .view-cart-tabs .nav-tabs > li.active > a {
+  background-color: transparent;
+}
+
+.nav-tabs > li.active > a,
+.nav-tabs > li.active > a:focus,
+.nav-tabs > li.active > a:hover {
+  color: #fff;
+  cursor: default;
+  background-color: #fff;
+  border: 0;
+  border-bottom-color: transparent;
+}
+
+#order-digit-of .view-cart-tabs .tab-content {
+  background-color: #2f3247;
+}
+
+#order-digit-of .field,
+#order-digit-of .form-control {
+  vertical-align: top;
+  border: 0;
+  display: -moz-inline-stack;
+  display: inline-block;
+  color: #fff;
+  outline: 0;
+  background: #3e415a !important;
+  width: 100%;
+  border-radius: 3px;
+  font-size: 13px;
+  margin: 8px 0;
+  padding: 10px;
+  text-align: left;
+}
+
+#order-digit-of select.form-control {
+  padding: 0 8px;
+}
+
+button.btn.btn-block {
+  background: #2794e9;
+  margin-top: 9px;
+  color: #fff;
+}
+
+.form-control-static {
+  min-height: 34px;
+  padding-top: 14px;
+  padding-bottom: 7px;
+  margin-bottom: 0;
+  position: relative;
+  left: -11px;
+}
+
+#inputPromotionCode,
+#inputFirstName,
+#inputLastName,
+#inputEmail,
+#inputCompanyName,
+#inputAddress1,
+#inputAddress2,
+#inputCity,
+#inputPostcode {
+  padding: 10px 10px 10px 40px !important;
+}
+
+select#inputCountry,
+select#inputDomainContact {
+  height: 40px;
+}
+
+input#inputPromotionCode::placeholder,
+#order-digit-of .field-icon i {
+  color: #fff;
+}
+
+input::placeholder {
+  color: #fff;
+}
+
+#order-digit-of .sub-heading span,
+#order-digit-of .sub-heading-borderless span {
+  color: #fff;
+  background-color: #222435;
+  top: -16px;
+  font-size: 13px;
+  padding: 8px 20px;
+  display: table;
+  position: relative;
+  margin: 0 auto;
+}
+
+#order-digit-of .sub-heading {
+  border-top: 1px solid #222435;
+  margin: 40px 0;
+}
+
+.btn-primary {
+  background: var(--main-gradient-color);
+  /* Old browsers */
+  background: -moz-linear-gradient(
+    left,
+    var(--main-gradient-color) 0%,
+    var(--secondary-gradient-color) 100%
+  );
+  /* FF3.6+ */
+  background: -webkit-gradient(
+    linear,
+    left left,
+    left right,
+    color-sleft(0%, var(--main-gradient-color)),
+    color-sleft(100%, var(--secondary-gradient-color))
+  );
+  /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(
+    left,
+    var(--main-gradient-color) 0%,
+    var(--secondary-gradient-color) 100%
+  );
+  /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(
+    left,
+    var(--main-gradient-color) 0%,
+    var(--secondary-gradient-color) 100%
+  );
+  /* Opera 11.10+ */
+  background: -ms-linear-gradient(
+    left,
+    var(--main-gradient-color) 0%,
+    var(--secondary-gradient-color) 100%
+  );
+  /* IE10+ */
+  background: linear-gradient(
+    to right,
+    var(--main-gradient-color) 0%,
+    var(--secondary-gradient-color) 100%
+  );
+  /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='var(--main-gradient-color)', endColorstr='var(--secondary-gradient-color)', GradientType=0);
+  /* IE6-9 */
+  color: #fff;
+  border-color: transparent;
+  border: 0;
+}
+
+.btn-primary:hover,
+.btn-primary:focus {
+  border: 0;
+  outline: none !important;
+  background: var(--main-gradient-color) !important;
+}
+
+#order-digit-of textarea.field {
+  height: auto;
+  padding: 20px;
+}
+
+.domain-checker-container,
+.tld-pricing-header {
+  background: var(--main-gradient-color);
+  /* Old browsers */
+  background: -moz-linear-gradient(
+    left,
+    var(--main-gradient-color) 0%,
+    var(--secondary-gradient-color) 100%
+  );
+  /* FF3.6+ */
+  background: -webkit-gradient(
+    linear,
+    left left,
+    left right,
+    color-sleft(0%, var(--main-gradient-color)),
+    color-sleft(100%, var(--secondary-gradient-color))
+  );
+  /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(
+    left,
+    var(--main-gradient-color) 0%,
+    var(--secondary-gradient-color) 100%
+  );
+  /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(
+    left,
+    var(--main-gradient-color) 0%,
+    var(--secondary-gradient-color) 100%
+  );
+  /* Opera 11.10+ */
+  background: -ms-linear-gradient(
+    left,
+    var(--main-gradient-color) 0%,
+    var(--secondary-gradient-color) 100%
+  );
+  /* IE10+ */
+  background: linear-gradient(
+    to right,
+    var(--main-gradient-color) 0%,
+    var(--secondary-gradient-color) 100%
+  );
+  /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='var(--main-gradient-color)', endColorstr='var(--secondary-gradient-color)', GradientType=0);
+  /* IE6-9 */
+}
+
+.featured-tld {
+  background: #43455a;
+}
+
+.featured-tlds-container {
+  margin: 50px 0;
+}
+
+.tld-filters {
+  margin: 15px 0 30px;
+}
+
+.domain-pricing .tld-pricing-header div:nth-child(odd) {
+  border-color: transparent;
+  background-color: transparent;
+}
+
+.domain-pricing .no-bg {
+  background-color: transparent !important;
+}
+
+.domain-pricing .tld-pricing-header .col-sm-2,
+.domain-pricing .tld-pricing-header .col-sm-4,
+.domain-pricing .tld-pricing-header .col-xs-2,
+.domain-pricing .tld-pricing-header .col-xs-4 {
+  background-color: transparent;
+  border: 0;
+}
+
+.row.tld-pricing-header.text-center {
+  padding: 10px 0;
+  color: #fff;
+}
+
+.domain-pricing .tld-row {
+  border-bottom: 0;
+  background: #43455a;
+  color: #fff;
+  padding: 15px 0;
+}
+
+.domain-pricing .two-row-center {
+  border-right: 2px solid #8a54b9;
+}
+
+.domain-promo-box {
+  background: #2794e9;
+  color: #fff;
+  border: 0;
+  min-height: 205px;
+  padding: 20px;
+  position: relative;
+  overflow: hidden;
+  margin-top: 50px;
+}
+
+.domain-promo-box i {
+  color: #1a5075;
+  opacity: 0.1;
+  font-size: 180px;
+  position: absolute;
+  right: -80px;
+  top: 0;
+  transform: rotate(30deg);
+}
+
+.domain-promo-box p {
+  margin: 10px 0;
+  font-size: 0.85em;
+  color: #fff;
+}
+
+.domain-promo-box a {
+  margin: 15px 0;
+}
+
+.domain-promo-box .small {
+  margin: 0;
+  color: #fff;
+}
+
+.domain-renewals {
+  background: #292c3e;
+  border: 0;
+  color: #fff;
+}
+
+.domain-renewals .domain-renewal {
+  border-bottom: 0;
+}
+
+.panel {
+  margin-bottom: 20px;
+  background-color: #474a64;
+  border: 0;
+  border-radius: 4px;
+  -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
+  color: #fff;
+}
+
+#order-digit-of .panel-addon {
+  background-color: #292c3e;
+}
+
+#order-digit-of .panel-addon .panel-body label {
+  margin-bottom: 20px;
+  color: #fff;
+}
+
+#order-digit-of .panel-addon .panel-body .icheckbox_square-blue {
+  margin-right: 10px;
+}
+
+#order-digit-of .panel-addon .panel-body .description-w {
+  font-family: "Karla", sans-serif;
+  font-size: 14px;
+  line-height: 26px;
+}
+
+#order-digit-of .field[disabled],
+#order-digit-of .field[readonly] {
+  background-color: #43465a;
+  opacity: 1;
+}
+
+#order-digit-of .apply-credit-container {
+  margin: 15px 0;
+  padding: 15px;
+  background-color: #43465a;
+}
+
+#order-digit-of .apply-credit-container .radio {
+  padding-left: 20px;
+  padding-right: 20px;
+  margin: 15px 0;
+}
+
+input[type="checkbox"],
+input[type="radio"] {
+  margin: 4px 8px 18px;
+  line-height: normal;
+}
+
+.input-group-addon {
+  background: transparent;
+  border: 0;
+  color: #fff;
+}
+
+#inputStateIcon,
+#inputCountryIcon {
+  display: none !important;
+}
+
+.selected-flag:focus {
+  outline: none;
+}
+
+.intl-tel-input.allow-dropdown .flag-container,
+.intl-tel-input.separate-dial-code .flag-container {
+  right: initial;
+  left: 0 !important;
+}
+
+.intl-tel-input {
+  width: 100%;
+  margin-top: 7px;
+}
+
+input#inputPhone {
+  position: relative;
+  height: 41px;
+  padding-left: 90px !important;
+}
+
+#paymentGatewaysContainer label {
+  color: #fff;
+  margin-bottom: 0;
+  background: #474a65;
+  padding: 10px 0;
+  border-radius: 24px;
+  margin: 10px;
+  width: 160px;
+  text-align: center;
+}
+
+#order-digit-of .product-info {
+  background-color: #26283c;
+  border-top: 1px solid #2b2d44;
+  border-bottom: 1px solid #2b2d44;
+}
+
+#containerNewUserSignup .prepend-icon {
+  position: relative;
+}
+
+.intl-tel-input .selected-flag .iti-flag {
+  left: 10px;
+}
+
+.intl-tel-input.separate-dial-code .selected-dial-code {
+  padding-right: 16px;
+}
+
+#order-digit-of .prepend-icon .field-icon {
+  top: 8px;
+}
+
+#order-digit-of .categories-collapsed {
+  background-color: #2e3247;
+}
+
+textarea.field::placeholder {
+  color: #fff;
+}
+
+input#inputCaptcha {
+  margin-top: 5px !important;
+}
+
+.suggested-domains .domain-lookup-suggestions-loader {
+  background-color: #181a25;
+}
+
+.panel-footer {
+  background-color: #292c3e;
+  border-top: 1px solid #292c3e;
+}
+
+#order-digit-of .field,
+#order-digit-of .form-control::placeholder {
+  color: #fff;
+}
+
+.spotlight-tld {
+  background-color: #313244;
+  color: #fff;
+  height: 130px;
+}
+
+.spotlight-tld .btn:not(.domain-contact-support) {
+  padding: 5px 10px;
+  background-color: var(--main-gradient-color);
+  border-color: var(--main-gradient-color);
+  color: #fff;
+  margin-top: 10px;
+}
+
+.addon-products {
+  margin-bottom: 20px;
+}
+
+#order-digit-of .order-summary .recurring-charges,
+.text-muted {
+  color: #fff;
+}
+
+#order-digit-of .addon-promo-container {
+  border: 0;
+  font-size: 14px;
+  background: #26283c;
+  border-radius: 2px;
+}
+
+#order-digit-of .addon-promo-container label {
+  margin-top: 13px;
+}
+
+.product-info p {
+  font-size: 15px;
+  line-height: 30px;
+}
+
+#order-digit-of .mc-promos {
+  max-width: initial;
+}
+
+#order-digit-of .mc-promo .body {
+  border-top: 0;
+  background-color: #2f3247;
+  font-size: 15px;
+  line-height: 29px;
+}
+
+/* Fix Stripe Payment Bg */
+#order-digit-of .cc-input-container {
+  background-color: #292c3e !important;
+  border: #292c3e;
+}
+
+#frmCheckout.paypal_ppcpv-payment-form #creditCardInputFields ul,
+#frmPayment.paypal_ppcpv-payment-form .paymethod-info:not([data-paymethod-id]) {
+  background-color: #3e415a !important;
+  border-color: #222435 !important;
+}
+
+.domain-renewals .domain-renewal:nth-child(even) {
+  background-color: transparent;
+}
+
+/* View Cart Improvements */
+.view-cart-items .item-domain {
+  font-size: 14px;
+}
+.view-cart-items small {
+  font-size: 14px;
+  margin: 10px 0 0;
+  display: block;
+}
+
+.item-price .cycle {
+  font-size: 14px !important;
+}
+
+#order-digit-of .account-select-container div.account.active {
+  background: #474a65;
+}
+
+#order-digit-of .account-select-container div.account {
+  border: 1px solid #474a65;
+  background: #3d4057;
+}
+
+#order-digit-of .account-select-container {
+  border-right: 1px solid #222435;
+}
+
+/* Checkout */
+
+#order-digit-of .wdes-custom-fields .field-help-text {
+  color: #fff;
+  font-size: 14px;
+}
+
+#order-digit-of .wdes-custom-fields label {
+  position: static;
+}
+
+#order-digit-of #paymentGatewaysContainer .iradio_square-blue {
+  margin-right: 5px;
+}
+
+button.btn.btn-default.btn-sm.generate-password {
+  font-size: 15px;
+}
+
+.select2-container--default .select2-selection--single {
+  background-color: #3e415a;
+}
+
+.select2-container--default
+  .select2-selection--single
+  .select2-selection__rendered {
+  color: #fff;
+}
+
+.select2-container--default
+  .select2-selection--single
+  .select2-selection__arrow
+  b {
+  border-color: #fff transparent transparent transparent;
+}
+
+.select2-container--default.select2-container--open
+  .select2-selection--single
+  .select2-selection__arrow
+  b {
+  border-color: transparent transparent #fff transparent;
+}
+
+.select2-dropdown {
+  background-color: #3b3d50;
+  border: 1px solid #3b3d50;
+  box-shadow: 0 0 20px #313244;
+}
+
+.select2-container--default .select2-search--dropdown .select2-search__field {
+  border-bottom: 1px solid #3b3d50;
+  color: #fff;
+}
+
+.select2-container--default .select2-results__option--selected,
+.select2-container--default
+  .select2-results__option--highlighted.select2-results__option--selectable {
+  background-color: var(--main-gradient-color);
+}
+
+span.select2-search.select2-search--dropdown:before {
+  color: #fff;
+}
+
+div#primaryLookupResult {
+  background-color: #313244;
+}
+
+#order-digit-of .transfer-not-eligible,
+#order-digit-of .transfer-eligible {
+  color: #fff;
+}
+
+#order-digit-of .product-configurable-options .form-group {
+  background-color: #292c3e;
+}
+
+#order-digit-of #inputBillingcycle {
+  background-color: #292c3e !important;
+}
+
+#order-digit-of .wdes-server-group .form-group {
+  background-color: #292c3e;
+}
+
+#order-digit-of .wdes-server-group .form-group .field,
+#order-digit-of .wdes-server-group .form-group .form-control {
+  background-color: #3b3d50 !important;
+}
+
+.panel-sidebar select.form-control[name="currency"] {
+  background-color: #222435 !important;
+}
+
+#order-digit-of .cc-input-container .existing-cc-grid {
+  color: #fff;
+}
+
+#order-digit-of #stripeElements .field,
+#order-digit-of #stripeElements .form-control {
+  background-color: #adb1c5 !important;
+}
+
+#order-digit-of .products .product header .qty {
+  color: #ddc0f4;
+}
+
+#order-digit-of .wdes-server-field-container {
+  background-color: #26283c;
+}
+
+#order-digit-of .wdes-server-field-container .field,
+#order-digit-of .wdes-server-field-container .form-control {
+  background-color: #3b3d50 !important;
+}
+
+#order-digit-of .sidebar-collapsed {
+  background-color: #292c3e;
+}
+
+.addon-renewals .service-renewal,
+.domain-renewals,
+.service-renewals {
+  background-color: #292c3e;
+}
+
+.domain-renewals,
+.service-renewals {
+  border-top-color: #3b3d50;
+}
+
+.addon-renewals .service-renewal:nth-child(even),
+.domain-renewals .domain-renewal:nth-child(even),
+.service-renewals .service-renewal:nth-child(even) {
+  background-color: #292c3e;
+}
+
+.domain-renewals .domain-renewal,
+.service-renewals .service-renewal {
+  border-bottom-color: #343850;
+}
+
+.addon-renewals > div {
+  border-color: #343850;
+}
+
+.service-renewals .div-renewal-ineligible {
+  color: #fff;
+}

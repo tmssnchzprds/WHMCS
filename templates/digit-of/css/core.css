@@ -1,0 +1,381 @@
+/*
+Theme Name: Digit - Responsive WHMCS Client Area Template
+Theme URI: http://www.whmcsdes.com
+Description: awesome and clean WHMCS Template. is designed for Hosting Companies,  Contains +25 Redesigned files which have been well organized built using 1170 grid system.
+Version: 8.0.4
+Author: WHMCSdes
+Author URI: http://whmcsdes.com
+Tags: powerful, host
+*/
+/*------------------------------------------------------------------
+
+[Table of contents]
+
+1.  Cart
+
+-------------------------------------------------------------------*/
+#order-digit-of .cart-body {
+  width: 100%;
+}
+#order-digit-of .products .product header .qty {
+  float: none;
+  font-size: 0.8em;
+  font-style: italic;
+  display: block;
+  font-style: normal;
+  font-size: 14px;
+  margin-top: 5px;
+}
+#order-digit-of .wdes-server-field-container {
+  padding: 15px;
+  border-radius: 3px;
+}
+#order-digit-of .mc-promo {
+  background-color: transparent;
+}
+#order-digit-of .view-cart-items .dropdown-menu {
+  right: 0;
+  left: initial;
+}
+#order-digit-of .domain-pricing .tld-row.highlighted {
+  background: transparent;
+}
+#order-digit-of .select2-container {
+  width: 100% !important;
+}
+#order-digit-of .select2-container--default .select2-selection--single {
+  border: 0;
+  border-radius: 3px;
+  padding: 4px;
+  height: initial;
+  margin: 8px 0;
+}
+#order-digit-of .select2-container--default .select2-selection--single:focus {
+  outline: none;
+}
+#order-digit-of .select2-container--default .select2-selection--single .select2-selection__arrow {
+  top: 12px;
+}
+#order-digit-of .select2-dropdown {
+  border-radius: 3px;
+}
+#order-digit-of .domain-selection-options .option {
+  margin-bottom: 12px;
+  padding: 0;
+  border-radius: 2px;
+  background-color: transparent;
+}
+#order-digit-of .domain-selection-options .option > label {
+  width: 100%;
+  padding: 20px;
+  font-size: 15px;
+  cursor: pointer;
+}
+#order-digit-of .domain-selection-options .option button.btn.btn-block {
+  margin-top: 8px;
+  padding: 7px 0;
+  border-radius: 3px;
+}
+#order-digit-of .domain-input-group {
+  padding: 25px 0;
+  margin: 0;
+}
+#order-digit-of .products .product header {
+  overflow: hidden;
+  position: relative;
+}
+#order-digit-of .products .product header .txt-container {
+  transform: rotate(45deg) translateX(50%);
+  top: -15px;
+  right: 15px;
+  left: auto;
+  width: 100px;
+  position: absolute;
+  max-height: 16px;
+  font-size: 10px;
+  padding: 4px;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #228ae6;
+  text-transform: uppercase;
+}
+#order-digit-of .spotlight-tlds {
+  background-color: transparent;
+  padding: 0;
+}
+#order-digit-of .spotlight-tld {
+  border: 0;
+}
+#order-digit-of div#primaryLookupResult {
+  padding: 40px 0;
+  border-radius: 3px;
+}
+#order-digit-of div#primaryLookupResult .wdes-check-icon {
+  display: block;
+  font-size: 48px;
+  margin-bottom: 10px;
+}
+#order-digit-of div#primaryLookupResult .domain-price {
+  font-size: 16px;
+}
+#order-digit-of .domain-checker-result-headline,
+#order-digit-of .domain-lookup-primary-results .headline {
+  margin-bottom: 10px;
+}
+#order-digit-of button#btnDomainContinue {
+  border-radius: 3px;
+  padding: 14px 40px;
+  font-size: 16px;
+}
+#order-digit-of button#btnDomainContinue i {
+  margin-right: 7px;
+}
+#order-digit-of .product-info {
+  margin-top: 20px;
+}
+#order-digit-of .transfer-not-eligible {
+  background-color: transparent;
+}
+#order-digit-of .transfer-eligible,
+#order-digit-of .transfer-not-eligible {
+  margin: 0;
+  padding: 0;
+}
+#order-digit-of .transfer-eligible {
+  background-color: transparent;
+  border-color: transparent;
+}
+#order-digit-of .product-info {
+  margin: 0 0 20px 0;
+  padding: 14px 15px 3px;
+  font-size: 0.85em;
+  font-size: 11px;
+  border-radius: 3px;
+}
+#order-digit-of .product-info .product-title {
+  margin: 0;
+  font-size: 24px;
+  line-height: initial;
+  margin-bottom: 10px;
+}
+#order-digit-of .wdes-product-heading-options {
+  font-family: Poppins, sans-serif;
+  font-size: 18px;
+  font-weight: 500;
+  margin-top: 20px;
+  margin-bottom: 25px;
+}
+#order-digit-of .product-configurable-options .form-group {
+  border-radius: 3px;
+  padding: 20px 15px;
+}
+#order-digit-of .product-configurable-options .form-group label.wdes-main-label {
+  margin-bottom: 12px;
+  font-size: 16px;
+}
+#order-digit-of .product-configurable-options .form-group label.wdes-item-option {
+  margin-bottom: 10px;
+}
+#order-digit-of .product-configurable-options .form-group label.wdes-item-option .iradio_square-blue {
+  margin-right: 5px;
+}
+#order-digit-of .product-configurable-options .form-group label.wdes-item-option:last-child {
+  margin-bottom: 0;
+}
+#order-digit-of .product-configurable-options .form-group .field,
+#order-digit-of .product-configurable-options .form-group .form-control {
+  background: #3b3d50 !important;
+  margin: 0;
+}
+#order-digit-of .product-configurable-options .form-group .wdes-item-check .icheckbox_square-blue {
+  margin-right: 5px;
+}
+#order-digit-of #inputBillingcycle {
+  margin: 0;
+  border: 0;
+  box-shadow: none;
+}
+#order-digit-of .panel-addon {
+  border: 0;
+  box-shadow: none;
+  border-radius: 3px;
+  padding: 20px 15px;
+  font-size: 15px;
+  text-align: left;
+}
+#order-digit-of .panel-addon .panel-body {
+  padding: 0;
+}
+#order-digit-of .panel-addon .panel-price {
+  margin-bottom: 7px;
+  padding: 0;
+  background-color: transparent;
+  color: #bec7cd;
+}
+#order-digit-of .alert-warning {
+  color: #ffffff;
+  background-color: var(--main-gradient-color);
+  border-color: var(--main-gradient-color);
+  font-size: 15px;
+}
+#order-digit-of .alert-warning a {
+  color: inherit;
+  border-bottom: 1px solid #fff;
+  text-decoration: none;
+}
+#order-digit-of .wdes-server-group .form-group {
+  padding: 20px 15px;
+  border-radius: 3px;
+}
+#order-digit-of .order-summary {
+  padding: 20px;
+  border-radius: 3px;
+  margin: 0 0 20px 0;
+  background-color: var(--main-gradient-color);
+  border-bottom: 0;
+}
+#order-digit-of .order-summary .wdes-head {
+  position: relative;
+}
+#order-digit-of .order-summary .wdes-head .loader {
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: initial;
+  text-align: initial;
+  padding-right: 0;
+}
+#order-digit-of .order-summary .wdes-head > h2 {
+  margin: 0;
+  padding: 0;
+  text-align: left;
+  font-size: 16px;
+  font-family: Poppins, sans-serif;
+  font-weight: 400;
+}
+#order-digit-of .order-summary .summary-container {
+  margin: 15px 0 0;
+  padding: 0;
+  min-height: 100px;
+  border-radius: 0;
+  font-size: 15px;
+  font-family: Karla, sans-serif;
+  font-size: 15px;
+  font-weight: 400;
+}
+#order-digit-of .order-summary .summary-container .clearfix {
+  margin: 8px 0;
+}
+#order-digit-of .order-summary .summary-container .summary-totals {
+  margin: 10px 0;
+  padding: 10px 0;
+}
+#order-digit-of .order-summary .summary-container .total-due-today {
+  margin-top: 18px;
+  display: block;
+}
+#order-digit-of .order-summary .summary-container .total-due-today span {
+  text-align: left;
+}
+#order-digit-of .order-summary .summary-container .total-due-today .amt {
+  font-size: 2em;
+  font-family: Poppins, sans-serif;
+  margin-top: 7px;
+}
+#order-digit-of .order-summary button#btnCompleteProductConfig {
+  width: 100%;
+  border-radius: 2px;
+  margin-top: 20px;
+  font-family: Poppins, sans-serif;
+  font-size: 15px;
+  font-weight: 400;
+  padding: 13px;
+}
+#order-digit-of div.header-lined h1 {
+  margin-top: 0;
+  margin-bottom: 0;
+  padding: 0;
+  border-bottom: 0;
+  float: left;
+  font-size: 25px;
+  font-weight: 600;
+}
+#order-digit-of div.header-lined p {
+  font-size: 15px;
+  margin: 12px 0 0 0;
+  display: inline-block;
+}
+#order-digit-of .order-summary .subtotal {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 15px;
+}
+#order-digit-of .order-summary .recurring-charges {
+  font-style: normal;
+}
+@media only screen and (min-width: 992px) {
+  #order-digit-of #scrollingPanelContainer {
+    position: sticky;
+    top: 20px;
+  }
+}
+
+.panel-default > .panel-heading {
+  color: #fff;
+  background-color: #313449;
+  border-color: transparent;
+}
+
+.select2-container--default .select2-search--dropdown .select2-search__field {
+  border: 0;
+  background-color: transparent;
+  padding-left: 30px;
+}
+.select2-container--default .select2-search--dropdown .select2-search__field:focus {
+  outline: none;
+}
+
+span.select2-search.select2-search--dropdown:before {
+  position: absolute;
+  top: 9px;
+  left: 10px;
+  content: "\f002";
+  font-family: "Font Awesome 5 Pro";
+  font-weight: 300;
+  font-size: 13px;
+}
+
+.panel-sidebar select.form-control[name=currency] {
+  border-radius: 35px;
+  box-shadow: none;
+}
+
+/* Smart Phones */
+@media only screen and (min-width: 160px) and (max-width: 767px) {
+  #order-digit .domain-input-group {
+    padding: 25px;
+  }
+}
+.domain-renewals,
+.service-renewals {
+  margin: 0;
+}
+
+.domain-renewals .domain-renewal .label,
+.service-renewals .service-renewal .label {
+  border-radius: 3px;
+  font-size: 13px;
+}
+
+.domain-renewals .domain-renewal,
+.service-renewals .service-renewal {
+  padding: 25px;
+}
+
+#serviceRenewalFilter,
+#hideShowServiceRenewalButton {
+  margin: 0 !important;
+}/*# sourceMappingURL=core.css.map */

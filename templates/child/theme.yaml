@@ -1,0 +1,5 @@
+name: "Digit Child"
+description: "Responsive WHMCS Client Area Template"
+author: "WHMCSdes"
+config:
+  parent: digit

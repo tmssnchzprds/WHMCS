@@ -1,0 +1,24 @@
+/*
+Theme Name: Digit - Responsive WHMCS Client Area Template [ RTL Version ]
+Theme URI: http://www.whmcsdes.com
+Description: awesome and clean WHMCS Template. is designed for Hosting Companies,  Contains +25 Redesigned files which have been well organized built using 1170 grid system.
+Version: 8.0.1
+Author: WHMCSdes
+Author URI: http://whmcsdes.com
+Tags: powerful, host
+*/
+
+#order-digit-of .domain-selection-options .option .iradio_square-blue {
+  margin-right: 0;
+  margin-left: 10px;
+}
+
+#order-digit-of .field,
+#order-digit-of .form-control {
+  text-align: right;
+}
+
+#owndomaintld {
+  padding-top: initial;
+  padding-bottom: initial;
+}
