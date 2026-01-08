@@ -1,0 +1,34 @@
+{
+  "schema": "1.0",
+  "type": "whmcs-provisioning",
+  "name": "cpanellicensing",
+  "license": "proprietary",
+  "category": "provisioning",
+  "description": {
+    "name": "cPanel Licensing",
+    "tagline": "Provision, Manage, and Bill for cPanel licenses.",
+    "short": "The cPanel Licensing Automation module for WHMCS allows cPanel Partners to manage, provision and bill for cPanel licenses using WHMCS.",
+    "long": "The cPanel Licensing Automation module for WHMCS automates and simplifies the process of selling cPanel licenses with automated syncronisation and billing functionality.\n\nNote that you must be a cPanel Partner in order to be able to use this module.",
+    "features": [
+      "Ability to offer the full range of new cPanel Licenses via Configurable Options",
+      "Automated provisioning of cPanel licenses via the cPanel Licensing API",
+      "Support for provisioning both fixed and auto-scaling license types",
+      "Automated update/sync of auto-scaling licenses along with automated calculation of billing price\n* Ability to manage cPanel licenses from within WHMCS",
+      "A simplified UX for managing cPanel License configurable options and pricing"
+    ]
+  },
+  "logo": {
+    "filename": "logo.png"
+  },
+  "support": {
+    "homepage": "https:\/\/www.cpanel.com\/",
+    "support_url": "https:\/\/www.cpanel.com\/support",
+    "docs_url": "https:\/\/docs.whmcs.com\/WHMCS_cPanel_Licensing_Module"
+  },
+  "authors": [
+    {
+      "name": "WHMCS",
+      "homepage": "https:\/\/www.whmcs.com\/"
+    }
+  ]
+}

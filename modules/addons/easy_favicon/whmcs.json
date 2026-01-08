@@ -1,0 +1,35 @@
+{
+  "schema": "1.0",
+  "type": "whmcs-addons",
+  "name": "easy_favicon",
+  "license": "proprietary",
+  "category": "other",
+  "description": {
+    "name": "Easy Favicon",
+    "tagline": "Set favicons for client and admin areas without coding.",
+    "long": "No programming skills are needed to add and change favicon at your WHMCS website. Just install the module, upload your favorite icons and set them as favicons in one click.",
+    "features": [
+      "download in one click (no registration, account verification and etc.);",
+      "freeware;",
+      "no programming skills needed;",
+      "separate favicons for client area and admin area;",
+      "favicon upload through admin panel;",
+      "it supports icons in .ico format, which may contains several icons of different sizes (for different devices) inside one file;",
+      "database is not used;",
+      "after module deactivation all setting return to initial state."
+    ]
+  },
+  "logo": {
+    "filename": "easy_favicon_logo.png"
+  },
+  "support": {
+    "homepage": "https:\/\/zebrasnake.com\/contacts\/contact-form\/?utm_source=addon;easy-favicon&utm_medium=whmcs&utm_campaign=addon;easy-favicon;whmcs&utm_content=1;addon;easy-favicon;whmcs;x;1-14;list-of-apps;link;zebrasnake.com/contacts/contact-form",
+    "docs_url": "https:\/\/zebrasnake.com\/products\/easy-favicon\/whmcs\/description\/?utm_source=addon;easy-favicon&utm_medium=whmcs&utm_campaign=addon;easy-favicon;whmcs&utm_content=1;addon;easy-favicon;whmcs;x;1-14;list-of-apps;link;zebrasnake.com/products/easy-favicon/whmcs/description"
+  },
+  "authors": [
+    {
+      "name": "ZebraSnake",
+      "homepage": "https:\/\/zebrasnake.com\/?utm_source=addon;easy-favicon&utm_medium=whmcs&utm_campaign=addon;easy-favicon;whmcs&utm_content=1;addon;easy-favicon;whmcs;x;1-14;list-of-apps;link;zebrasnake.com"
+    }
+  ]
+}

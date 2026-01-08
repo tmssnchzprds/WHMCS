@@ -1,0 +1,25 @@
+Client Password Changer:
+
+Version 1.0.0 (7-03-2024)
+- Initial release of the module.
+
+Version 1.1.0 (1-05-2024)
+- Auto-generate password: Allows admins to create secure passwords effortlessly for clients.
+- Copy password: Simplifies password handling by enabling easy copying.
+
+Version 1.2.0 (16-08-2024)
+- Achieved full compatibility with the SwiftModders template, ensuring seamless integration and a consistent user experience.
+
+Version 2.1.0 (29-11-2024)
+- Refined the module design for a modern and intuitive interface.
+- Enhanced module security to protect user data and prevent vulnerabilities.
+
+Version 2.2.0 (14-03-2025)
+- Improved the module's method for better efficiency.
+- Enhanced security measures to strengthen data protection.
+
+Version 2.2.1 (22-03-2025)
+- The licensing system has been enhanced.
+
+Version 2.2.2 (30-06-2025)
+- Sidebar auto-collapses when the module is accessed from the WHMCS admin area.

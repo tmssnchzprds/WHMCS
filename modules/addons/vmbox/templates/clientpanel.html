@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta charset="UTF-8" />
+    <link href="modules/servers/vmbox/css/client.min.css" rel="stylesheet" />
+    <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+    <script src="modules/servers/vmbox/js/utils.min.js"></script>
+    <script src="modules/servers/vmbox/js/scripts.min.js"></script>
+    <script src="modules/servers/vmbox/js/vmbox.min.js"></script>
+  </head>
+
+  <body>
+    <div class="panelContainer" id="panelContainer">
+      <!-- Controled by VMBOX.Message(Content, Type) -->
+      <div class="hidden" id="vmb_panel_msg">
+        <div id="vmb_panel_msg_content" class="info">Message Content</div>
+      </div>
+      <!-- ----------------------------------------- -->
+
+      <div class="panelHeader d-flex" style="flex-direction: row-reverse">
+        <div class="secondaryHeader d-flex">
+          <div class="OsLogo card d-flex w-100">
+            <img id="OsLogo" src="modules/servers/vmbox/assets/other.png" />
+            <div class="w-100 text-center" id="templateName"></div>
+          </div>
+        </div>
+        <div class="primaryHeader d-flex w-100">
+          <div id="serverActions" class="serverActions card d-flex">
+            <img
+              class="serverAction disabled"
+              id="wmks"
+              src="modules/servers/vmbox/assets/wmks.png"
+              onclick="vmbox.OpenServerConsole()"
+            />
+            <img
+              class="serverAction disabled"
+              id="vmSuspend"
+              src="modules/servers/vmbox/assets/suspend.png"
+            />
+            <img
+              class="serverAction disabled"
+              id="pwrOn"
+              src="modules/servers/vmbox/assets/pwron.png"
+            />
+            <img
+              class="serverAction disabled"
+              id="pwrOff"
+              src="modules/servers/vmbox/assets/pwroff.png"
+            />
+            <img
+              class="serverAction disabled"
+              id="pwrRst"
+              src="modules/servers/vmbox/assets/restart.png"
+            />
+          </div>
+
+          <div class="serverDetails card">
+            <div id="selectLanguage">
+              <span class="lang" data-value="En">Eng</span>
+              <span class="lang" data-value="Fa">Per</span>
+            </div>
+            <p class="i18n">
+              <!-- set by VMBOX.onStatusChanged -->
+              Status: <span id="serverStatus">...</span> <br />
+
+              <!-- set by VMBOX.onIpAddressChanged -->
+              IP Address: <span id="serverIpAddress">...</span> <br />
+
+              <!-- set by VMBOX. -->
+              Hostname: <span id="serverHostname">...</span> <br />
+
+              <!-- set by VMBOX. -->
+              Uptime: <span id="serverUptime">...</span>
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="tab i18n">
+        <button
+          class="tablinks i18n"
+          onclick="openTab(event, 'Overview')"
+          id="defaultOpen"
+        >
+          Overview
+        </button>
+        <button class="tablinks i18n" onclick="openTab(event, 'Install')">
+          Install
+        </button>
+        <button class="tablinks i18n" onclick="openTab(event, 'Monitoring')">
+          Monitoring
+        </button>
+        <button id="ScriptsTabButton" class="tablinks i18n" onclick="openTab(event, 'Scripts')">
+          Scripts
+        </button>
+      </div>
+
+      <!-- Overview Section Start -->
+      <div id="Overview" class="tabcontent">
+        <div class="d-flex">
+          <div class="screenshotFrame">
+            <img
+              id="screenShot"
+              alt="Loading..."
+              onclick="toggleScreenshotFullscreen()"
+              src="data:image/png;base64,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"
+            />
+          </div>
+        </div>
+        <div class="seperatorLine"></div>
+        <div class="otherActions">
+          <div
+            id="remoteConnection"
+            class="action"
+            onclick="vmbox.OpenRemoteConnection()"
+          >
+            <img src="modules/servers/vmbox/assets/overviewActionRemote.png" />
+            <div class="actTitle i18n">Remote Connection</div>
+          </div>
+          <div class="action" onclick="vmbox.OpenAccessInformation()">
+            <img
+              src="modules/servers/vmbox/assets/overviewActionAccessInfo.png"
+            />
+            <div class="actTitle i18n">Access Information</div>
+          </div>
+          <div class="action hidden">
+            <img
+              src="modules/servers/vmbox/assets/overviewActionChangePass.png"
+            />
+            <div class="actTitle i18n">Change Password</div>
+          </div>
+        </div>
+      </div>
+      <!-- Overview Section End -->
+
+      <!-- Install Section Start -->
+      <div id="Install" class="tabcontent">
+        <div class="otherActions">
+          <div class="action hidden" id="OsInstallation">
+            <img
+              src="modules/servers/vmbox/assets/installActionOsInstall.png"
+            />
+            <div class="actTitle i18n">OS Installation</div>
+          </div>
+          <div class="action hidden" id="InsertISO">
+            <img
+              src="modules/servers/vmbox/assets/installActionInsertISO.png"
+            />
+            <div class="actTitle i18n">Insert ISO</div>
+          </div>
+          <div class="action hidden" id="EjectISO">
+            <img
+              src="modules/servers/vmbox/assets/installActionInsertISO.png"
+            />
+            <div class="actTitle i18n">Eject ISO</div>
+          </div>
+        </div>
+      </div>
+      <!-- Install Section End -->
+
+      <!-- Monitoring Section Start -->
+      <div id="Monitoring" class="tabcontent">
+        <div class="d-flex">
+          <span id="cpu" class="usage">
+            <div id="cpu_chart"></div>
+          </span>
+          <span id="ram" class="usage">
+            <div id="ram_chart"></div>
+          </span>
+        </div>
+        <div class="graphTitle-group d-flex">
+          <div
+            id="defaultUsageOpen"
+            class="graphTitle"
+            onclick="selectUsageType(event, 'cpuGraph')"
+          >
+            <span>CPU</span>
+            <select
+              id="cpuGraphTimeSpan"
+              onchange="timeSpanChanged(event)"
+              onclick="event.stopPropagation()"
+            >
+              <option value="RealTime">Real-time</option>
+              <option value="LastDay">Last day</option>
+              <option value="LastWeek">Last week</option>
+              <option value="LastMonth">Last month</option>
+              <option value="LastYear">Last year</option>
+            </select>
+          </div>
+          <div class="graphTitle" onclick="selectUsageType(event, 'ramGraph')">
+            <span>RAM</span>
+            <select
+              id="ramGraphTimeSpan"
+              onchange="timeSpanChanged(event)"
+              onclick="event.stopPropagation()"
+            >
+              <option value="Real-time">Real-time</option>
+              <option value="LastDay">Last day</option>
+              <option value="LastWeek">Last week</option>
+              <option value="LastMonth">Last month</option>
+              <option value="LastYear">Last year</option>
+            </select>
+          </div>
+        </div>
+        <div id="cpuGraph" class="usageGraphContainer"></div>
+        <div id="ramGraph" class="usageGraphContainer"></div>
+      </div>
+      <!-- Monitoring Section End -->
+
+      <!-- Scripts Section Start (not completed yet) -->
+      <div id="Scripts" class="tabcontent">
+        <div id="ScriptsList" class="scriptsList"></div>
+        <svg class="vmb_sprites">
+          <symbol id="select-arrow-down" viewbox="0 0 10 6">
+            <polyline points="1 1 5 5 9 1"></polyline>
+          </symbol>
+        </svg>
+      </div>
+      <!-- Scripts Section End -->
+
+      <div class="vmbModal" id="vmbModal">
+        <div class="modalPaperContainer">
+          <div class="clickAwayListener" onclick="CloseModal('vmbModal')"></div>
+          <div class="modalPaper" id="modalPaper">
+            <div class="modal">
+              <div class="modal-body">
+                <div class="modal-header">
+                  <img class="modal-logo" id="modalLogo" alt=" " src="" />
+                  <div class="modal-name" id="modalName"></div>
+                  <div class="header-x-touch" onclick="CloseModal('vmbModal')">
+                    <div class="header-x">
+                      <div class="header-x-line1"></div>
+                      <div class="header-x-line2"></div>
+                    </div>
+                  </div>
+                </div>
+                <div class="modal-content" id="modalContent"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      //  OS Logos
+      var OsLogos = {
+        centOs: "modules/servers/vmbox/assets/centos.png",
+        debian: "modules/servers/vmbox/assets/debian.png",
+        issabel: "modules/servers/vmbox/assets/issabel.png",
+        kali: "modules/servers/vmbox/assets/kali.png",
+        linux: "modules/servers/vmbox/assets/linux.png",
+        mikrotik: "modules/servers/vmbox/assets/mikrotik.png",
+        other: "modules/servers/vmbox/assets/other.png",
+        ubuntu: "modules/servers/vmbox/assets/ubuntu.png",
+        windows: "modules/servers/vmbox/assets/windows.png",
+      };
+      var OsTags = {
+        // Template Aliases
+        "دبین ۱۰": OsLogos.debian,
+        میکروتیک: OsLogos.mikrotik,
+        MikroTik: OsLogos.mikrotik,
+        Issabel: OsLogos.issabel,
+
+        // OS Types:
+        Windows: OsLogos.windows,
+        Ubuntu18: OsLogos.ubuntu,
+        CentOs7: OsLogos.centOs,
+        Debian8: OsLogos.debian,
+        Other: OsLogos.other,
+      };
+    </script>
+
+    <script>
+      //  i18n
+      // find all elements with classname "i18n", replace contents with translated text
+      var i18n = {
+        DefaultLanguage: localStorage.getItem("Lang")
+          ? localStorage.getItem("Lang")
+          : "{{lang}}".startsWith("{{")
+          ? "En" // Default language
+          : "{{lang}}",
+        Languages: {
+          Fa: {
+            _RTL: true, // set direction: rtl; if true
+            "Remote Connection": "دسترسی ریموت",
+            "Access Information": "اطلاعات دسترسی",
+            "Change Password": "تعویض پسورد",
+            "OS Installation": "تعویض سیستم عامل",
+            "Insert ISO": "اتصال ایزو",
+            "Eject ISO": "قطع اتصال ایزو",
+            Status: "وضعیت",
+            "IP Address": "آدرس آی پی",
+            Hostname: "هاست نیم",
+            Uptime: "آپ تایم",
+            Overview: "مروری بر سرور",
+            Install: "نصب",
+            Monitoring: "مانیتورینگ",
+
+            Registered: "ثبت شده",
+            Deployed: "آماده اجرا",
+            PoweredOn: "روشن",
+            PoweredOff: "خاموش",
+            VmSuspended: "در حالت تعلیق",
+            Deleted: "حذف شده",
+            NotFound: "پیدا نشد",
+            Terminated: "به اتمام رسیده",
+            "Pending for PowerOn": "در حال روشن کردن",
+            "Pending for PowerOff": "در حال خاموش کردن",
+            "Pending for InsertISO": "در حال اتصال ایزو",
+            "Pending for EjectISO": "در حال قطع کردن ایزو",
+            "Pending for VmSuspend": "در حال تعلیق",
+            "Pending for Delete": "در حال حذف کردن",
+            "Pending for Deploy": "در حال راه اندازی",
+            "Pending for SetupOS": "در حال تنظیم سیستم عامل",
+            "Pending for Terminate": "در حال اتمام دوره سرویس",
+
+            "Service not registered": "سرویس ثبت نشده است",
+            "Service is suspended!": "سرویس در حالت تعلیق است",
+            "Connection Lost, Please try again...":
+              "ارتباط با پنل کاربری قطع شد، لطفاً دوباره تلاش کنید...",
+            "Connecting to Panel...": "در حال اتصال به پنل کاربری...",
+            "You are about to Power off your server...":
+              "شما در حال خاموش کردن سرورتان هستید...",
+            "You are about to Restart your server...":
+              "شما در حال ری استارت کردن سرورتان هستید",
+            "You are about to Suspend (Hibernate) your server...":
+              "شما در حال معلق سازی ( هایبرنیت ) سرورتان هستید...",
+            "You are about to eject cd-rom devices from your server...":
+              "شما در حال خارج کردن فایل ایزو از سرورتان هستید...",
+            "Are you sure?": "آیا مطمئن اید؟",
+            "Operation failed.": "عملیات ناموفق بود",
+            "No OS Templates available now.":
+              "هم اکنون سیستم عاملی در دسترس نیست",
+            "No ISO files available now.": "هیچ فایل ایزویی در دسترس نیست",
+            "No Scripts available right now!":
+              "هیچ اسکریپت قابل اجرایی یافت نشد",
+            "Select OS Template...": "انتخاب سیستم عامل...",
+            "Please select a Template first.": "ابتدا سیستم عاملی انتخاب کنید.",
+            "Select ISO file...": "انتخاب فایل ایزو...",
+            "Please select a ISO file first.": "ابتدا فایل ایزویی انتخاب کنید.",
+            "Select an Option...": "انتخاب کنید",
+            "Install Selected": "شروع نصب",
+            "Insert Selected": "اتصال فایل ایزو",
+            Cancel: "لغو",
+            Yes: "بله",
+            No: "خیر",
+            Unknown: "نامشخص",
+
+            Preparing: "آماده سازی",
+            Deleting: "حذف کردن",
+            "Powering On": "روشن کردن",
+            "Powering Off": "خاموش کردن",
+            Suspending: "در حال تعلیق",
+            Deleting: "حذف کردن",
+            Cloning: "در حال کلون کردن",
+            "Post Clone Configuration": "اجرای تنظیمات",
+            Finishing: "نهایی کردن",
+            "Ejecting ISO File": "خارج کردن ایزو",
+            "Inserting ISO File": "نصب فایل ایزو",
+            "Connecting interfaces": "اتصال به شبکه",
+            "Waiting for Guest OS to respond": "انتظار برای بوت سیستم عامل",
+            "Uploading setup scripts": "آپلود اسکریپت ها",
+            "Executing setup": "اجرای دستورات",
+            Terminating: "حذف کردن",
+            UnSuspending: "درحال رفع تعلیق",
+
+            Scripts: "اسکریپت ها",
+            Run: "اجرا",
+            Details: "جزئیات",
+            Output: "خروجی",
+            Error: "خطا",
+            Close: "بستن",
+            Execution: "اجرا",
+          },
+        },
+      };
+      i18n.Translate = (Text) => {
+        var currentLang = i18n.Languages[i18n.DefaultLanguage];
+        if (typeof currentLang !== "object") {
+          // lang not found
+          return Text;
+        }
+        var searchPatterns = Object.keys(currentLang).filter(
+          (k) => !k.startsWith("_")
+        );
+        if (currentLang[Text]) {
+          return currentLang[Text];
+        }
+        searchPatterns.forEach((p) => (Text = Text.replace(p, currentLang[p])));
+        return Text;
+      };
+      i18n.TranslateAllDocument = () => {
+        var currentLang = i18n.Languages[i18n.DefaultLanguage];
+        if (typeof currentLang !== "object") {
+          // lang not found
+          return;
+        }
+        var searchPatterns = Object.keys(currentLang).filter(
+          (k) => !k.startsWith("_")
+        );
+        var i18nElems = document.getElementsByClassName("i18n");
+        for (var i = 0; i < i18nElems.length; i++) {
+          var e = i18nElems[i];
+          if (currentLang._RTL) {
+            e.classList.add("dir-rtl");
+          }
+          var childCount = e.childNodes.length;
+          for (var j = 0; j < childCount; j++) {
+            var c = e.childNodes[j];
+            if (c.nodeType !== document.TEXT_NODE) {
+              continue;
+            }
+            searchPatterns.forEach(
+              (p) => (c.textContent = c.textContent.replace(p, currentLang[p]))
+            );
+          }
+        }
+      };
+      window.VMBOX_i18n = i18n;
+      i18n.TranslateAllDocument();
+      var selectLang = document.getElementById("selectLanguage");
+      if (selectLang) {
+        if (
+          i18n.Languages[i18n.DefaultLanguage] &&
+          i18n.Languages[i18n.DefaultLanguage]._RTL
+        ) {
+          selectLang.style.right = "unset";
+          selectLang.style.left = "5px";
+        }
+        var langs = selectLang.querySelectorAll(".lang");
+        for (var i = 0; i < langs.length; i++) {
+          if (langs[i].dataset["value"] === i18n.DefaultLanguage) {
+            langs[i].classList.add("selected");
+          } else {
+            langs[i].addEventListener("click", (e) => {
+              localStorage.setItem("Lang", e.target.dataset["value"]);
+              location.reload();
+            });
+          }
+        }
+      }
+    </script>
+
+    <script>
+      var DEBUG = false;
+      var RELOAD_PANEL_INTERVAL = 50000; // ms
+      var RELOAD_SCRIPTS_INTERVAL = 30000; // ms
+      var RELOAD_SCREENSHOT_INTERVAL = 5000; // ms
+      var RELOAD_MONITORING_INTERVAL = 20000; // ms
+      var Charts = {};
+      (async function () {
+        var hash = "{{wsHash}}";
+        window.defaultIpAddress = "{{dedicatedip}}";
+        window.defaultPassword = "{{defaultPassword}}";
+        if (hash.length < 10) {
+          // Service not found at vmbox
+          ShowMessage(i18n.Translate("Service not registered"));
+          return;
+        }
+        var vmbox = new VMBOX("{{wsAddr}}", {
+          IpAddress: "{{dedicatedip}}",
+          Username: "{{defaultUsername}}",
+          Password: "{{defaultPassword}}",
+        });
+        window.vmbox = vmbox;
+
+        // overriding default event handlers
+        // vmbox.onStatusChanged = (state) => {
+        //   document.getElementById("serverStatus").innerHTML = state;
+        // };
+
+        // calling vmbox.Setup() after page is fully loaded
+        if (document.readyState !== "complete") {
+          oldOnLoad = window.onload;
+          window.onload = (evt) => {
+            vmbox.Setup();
+            if (oldOnLoad) oldOnLoad();
+          };
+        } else {
+          vmbox.Setup();
+        }
+      })();
+
+      document.getElementById("defaultOpen").click();
+      document.getElementById("defaultUsageOpen").click();
+
+      var _modalTemplate = document.getElementById("vmbModal").innerHTML;
+    </script>
+  </body>
+</html>
